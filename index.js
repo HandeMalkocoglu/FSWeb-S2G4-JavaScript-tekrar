@@ -50,9 +50,11 @@ function KareninAlani(kenaruzunlugu) {
 	4. Hesaplanan çemberin çevresi döndürülecektir.
 */
 
-function CemberinCevresi(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinCevresi(yaricap) {
+  return 2 * pi * yaricap;
 }
+
+console.log(CemberinCevresi(5));
 
 /* (Oto test yok) Yukarıdaki CemberinCevresi fonksiyonunu yarıçap = 5 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -64,9 +66,10 @@ function CemberinCevresi(/* kodlar buraya */) {
 	4. Hesaplanan çemberin alanı döndürülecektir.
 */
 
-function CemberinAlani(/* kodlar buraya */) {
-  /* kodlar buraya */
+function CemberinAlani(yaricap, piDegeri) {
+  return piDegeri * Math.pow(yaricap, 2);
 }
+console.log(CemberinAlani(15, pi));
 
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
@@ -98,28 +101,59 @@ let ucetambolunenler,
   tekraredensayilar;
 
 // 3a çözümü
-
-/* kodlar buraya */
+enkucuk = sayilar[0];
+enbuyuk = sayilar[0];
+for (let i=1; i < sayilar.length; i++) {
+  if (sayilar[i] < enkucuk) sayilar[i];
+  if (sayilar[i] > enbuyuk) sayilar[i];
+}
+console.log(enkucuk);
+console.log(enbuyuk);
 
 // 3b çözümü:
 
-/* kodlar buraya */
+ucetambolunenler = [];
+sayilar.forEach((sayi) => {
+  if (sayi %3 === 0) ucetambolunenler.push(sayi);
+});
+console.log(ucebolunenler);
 
 // 3c çözümü:
 
-/* kodlar buraya */
+ucebolunenlerintoplami = ucetambolunenler.reduce((toplam, sayi) => toplam + sayi, 0);
+console.log(ucebolunenlerintoplami0);
 
 // 3d çözümü
 
-/* kodlar buraya */
+besyuzdenkucuksayilar = sayilar.filter((sayi) => sayi <500);
+console.log(besyuzdenkucuksayilar);
 
 // 3e çözümü
 
-/* kodlar buraya */
+siralisayilar = [...besyuzdenkucuksayilar].sort((a,b) => a - b);
+console.log(siralisayilar);
 
 // 3f çözümü
 
-/* kodlar buraya */
+const tekrarSayisi = {};
+sayilar.forEach((sayi) => {
+  if (tekrarSayisi[sayi]) {
+    tekrarSayisi[sayi]++;
+}
+else {
+  tekrarSayisi[sayi] = t1;
+}
+});
+tekraredensayilar = [];
+
+for (const sayi in tekrarSayisi) {
+  if (tekrarSayisi[sayi] > 1) {
+    const tekrarBilgisi = `{sayi} sayısı ${tekrarSayisi[sayi]} kere tekrar edilmiştir`;
+    tekraredensayilar.push(tekrarBilgisi);
+  }
+}
+console.log(tekraredensayilar);
+
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
 
