@@ -71,6 +71,7 @@ function CemberinAlani(yaricap, piDegeri) {
 }
 console.log(CemberinAlani(15, pi));
 
+
 /* (Oto test yok) Yukarıdaki CemberinAlani fonksiyonunu yarıçap = 15 vererek aşağıda çalıştırıp, sonucu konsolda gözlemleyin (console.log)  */
 
 /* 	GÖREV 3:
@@ -153,6 +154,9 @@ for (const sayi in tekrarSayisi) {
   }
 }
 console.log(tekraredensayilar);
+
+
+/*deneme
 
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
